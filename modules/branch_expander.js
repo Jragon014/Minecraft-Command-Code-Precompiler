@@ -63,6 +63,7 @@ return {
     function splitAtBranch(string) {
         var result = new Array();
         var splitStart = string.search(/\w+(\|\w+)+/);
+        result = escape(result);
 
         if (splitStart >= 0) {
             var temp = string.substring(splitStart, string.length);
